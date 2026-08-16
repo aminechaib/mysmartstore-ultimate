@@ -1,13 +1,9 @@
-// File: apps/backend/src/modules/search-log/models/search-log.ts
-// --- PART 1 ---
 import { model } from "@medusajs/framework/utils"
 
 export const SearchLog = model.define("search_log", {
   id: model.id().primaryKey(),
   query: model.text(),
+  results_count: model.number().default(0),
   ai_response: model.text().nullable(),
-  search_term: model.text().nullable(),       // NEW: Stores the clean English term
-  results_count: model.number().default(0),   // NEW: Stores how many products we found
+  search_term: model.text().nullable(),
 })
-
-// End of Part 1
