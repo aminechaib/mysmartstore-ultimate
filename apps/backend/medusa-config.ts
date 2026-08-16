@@ -13,23 +13,22 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET,
     },
   },
-   modules: {
+  modules: {
+    // 🛠️ All custom modules now point to the correct /src/modules/ folders
     searchLogModuleService: {
-      resolve: "./modules/search-log", // <-- ADDED /src/ HERE
+      resolve: "./src/modules/search-log",
     },
-      heroBannerModuleService: {
+    heroBannerModuleService: {
       resolve: "./src/modules/hero-banner",
     },
-        promoBarModuleService: {
+    promoBarModuleService: {
       resolve: "./src/modules/promo-bar",
     },
     storefrontSectionModuleService: {
       resolve: "./src/modules/storefront-section",
     },
-// Inside apps/backend/medusa-config.ts, add this to your modules object:
     marketingModuleService: {
-      resolve: "./src/modules/marketing",
+      resolve: "./src/modules/marketing-badges",
     },
-
   },
-} )
+})
