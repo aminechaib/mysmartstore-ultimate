@@ -1,6 +1,6 @@
 import { Module } from "@medusajs/framework/utils"
-import StorefrontSectionService from "./service"
+import StorefrontSectionModuleService from "./service"
 
 export default Module("storefrontSectionModuleService", {
-  service: StorefrontSectionService,
+  service: StorefrontSectionModuleService,
 })
